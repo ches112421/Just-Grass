@@ -398,13 +398,30 @@ DropBoomboxes.MouseButton1Down:Connect(function()
 	end
 end)
 
+local StealingBoomBoxes = false
+
 StealBoomboxes.MouseButton1Down:Connect(function()
 	Ripple(StealBoomboxes)
-	for _,v in pairs(workspace:GetChildren()) do
-		if v:IsA("Tool") and v.Name == "BoomBox" then
-			Player.Character.Humanoid:EquipTool(v)
-		end
-	end
+	if StealingBoomBoxes == false then 
+	    StealingBoomBoxes = true
+	    
+	    StealBoomboxes.Text = "Stop Stealing"
+	    
+	    while StealingBoomBoxes == true do
+	        task.wait()
+	    for _,v in pairs(workspace:GetChildren()) do
+	        task.wait()
+		    if v:IsA("Tool") and v.Name == "BoomBox" then
+		    	Player.Character.Humanoid:EquipTool(v)
+		    end
+	    end
+	    end
+	    
+end
+	if StealingBoomBoxes == true then
+	    StealBoomboxes.Text = "Steal Boomboxes"
+	    StealingBoomBoxes = false
+	   end 
 end)
 
 MassPlay.MouseButton1Down:Connect(function()
