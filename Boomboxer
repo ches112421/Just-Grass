@@ -1,0 +1,427 @@
+if game.CoreGui:FindFirstChild("BoomBoxerGui") then
+	game.CoreGui:FindFirstChild("BoomBoxerGui"):Destroy()
+end  
+
+local BoomBoxerGui = Instance.new("ScreenGui")
+local HolderFrame = Instance.new("Frame")
+local DropShadowHolder = Instance.new("Frame")
+local DropShadow = Instance.new("ImageLabel")
+local MainFrame = Instance.new("Frame")
+local AmountBox = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local UIListLayout = Instance.new("UIListLayout")
+local DupeBoomboxes = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local MassPlay = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local AudioIDBox = Instance.new("TextBox")
+local UICorner_5 = Instance.new("UICorner")
+local UIPadding = Instance.new("UIPadding")
+local StealBoomboxes = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local DropBoomboxes = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local CountBoomboxes = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local UIPadding_2 = Instance.new("UIPadding")
+local BoomText = Instance.new("TextLabel")
+local BoxerText = Instance.new("TextLabel")
+local Sample = Instance.new("ImageLabel")
+
+--Properties:
+
+BoomBoxerGui.Name = "BoomBoxerGui"
+BoomBoxerGui.Parent = game.CoreGui
+BoomBoxerGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+HolderFrame.Name = "HolderFrame"
+HolderFrame.Parent = BoomBoxerGui
+HolderFrame.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+HolderFrame.BackgroundTransparency = 1.000
+HolderFrame.BorderSizePixel = 0
+HolderFrame.Position = UDim2.new(0.586553395, 0, 0.568098187, 0)
+HolderFrame.Size = UDim2.new(0, 300, 0, 210)
+
+DropShadowHolder.Name = "DropShadowHolder"
+DropShadowHolder.Parent = HolderFrame
+DropShadowHolder.BackgroundTransparency = 1.000
+DropShadowHolder.BorderSizePixel = 0
+DropShadowHolder.Size = UDim2.new(1, 0, 1, 0)
+DropShadowHolder.ZIndex = 0
+
+DropShadow.Name = "DropShadow"
+DropShadow.Parent = DropShadowHolder
+DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow.BackgroundTransparency = 1.000
+DropShadow.BorderSizePixel = 0
+DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+DropShadow.Size = UDim2.new(1, 47, 1, 47)
+DropShadow.ZIndex = 0
+DropShadow.Image = "rbxassetid://6014261993"
+DropShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+DropShadow.ImageTransparency = 0.500
+DropShadow.ScaleType = Enum.ScaleType.Slice
+DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = HolderFrame
+MainFrame.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+MainFrame.BorderSizePixel = 0
+MainFrame.Size = UDim2.new(0, 300, 0, 210)
+
+AmountBox.Name = "AmountBox"
+AmountBox.Parent = MainFrame
+AmountBox.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+AmountBox.BorderSizePixel = 0
+AmountBox.Size = UDim2.new(0, 290, 0, 30)
+AmountBox.Font = Enum.Font.Gotham
+AmountBox.PlaceholderText = "Enter Boombox Amount"
+AmountBox.Text = ""
+AmountBox.TextColor3 = Color3.fromRGB(194, 194, 194)
+AmountBox.TextSize = 13.000
+AmountBox.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0, 4)
+UICorner.Parent = AmountBox
+
+UICorner_2.CornerRadius = UDim.new(0, 4)
+UICorner_2.Parent = MainFrame
+
+UIListLayout.Parent = MainFrame
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 5)
+
+DupeBoomboxes.Name = "DupeBoomboxes"
+DupeBoomboxes.Parent = MainFrame
+DupeBoomboxes.BackgroundColor3 = Color3.fromRGB(255, 184, 3)
+DupeBoomboxes.BorderSizePixel = 0
+DupeBoomboxes.ClipsDescendants = true
+DupeBoomboxes.Position = UDim2.new(0, 0, 0.184210524, 0)
+DupeBoomboxes.Size = UDim2.new(0, 290, 0, 25)
+DupeBoomboxes.Font = Enum.Font.Gotham
+DupeBoomboxes.Text = "Dupe"
+DupeBoomboxes.TextColor3 = Color3.fromRGB(33, 33, 33)
+DupeBoomboxes.TextSize = 13.000
+
+UICorner_3.CornerRadius = UDim.new(0, 4)
+UICorner_3.Parent = DupeBoomboxes
+
+MassPlay.Name = "MassPlay"
+MassPlay.Parent = MainFrame
+MassPlay.BackgroundColor3 = Color3.fromRGB(255, 184, 3)
+MassPlay.BorderSizePixel = 0
+MassPlay.ClipsDescendants = true
+MassPlay.Position = UDim2.new(0, 0, 0.342105269, 0)
+MassPlay.Size = UDim2.new(0, 290, 0, 25)
+MassPlay.Font = Enum.Font.Gotham
+MassPlay.Text = "Mass Play"
+MassPlay.TextColor3 = Color3.fromRGB(33, 33, 33)
+MassPlay.TextSize = 13.000
+MassPlay.TextXAlignment = Enum.TextXAlignment.Right
+
+UICorner_4.CornerRadius = UDim.new(0, 4)
+UICorner_4.Parent = MassPlay
+
+AudioIDBox.Name = "AudioIDBox"
+AudioIDBox.Parent = MassPlay
+AudioIDBox.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+AudioIDBox.BorderSizePixel = 0
+AudioIDBox.Position = UDim2.new(0.00899999961, 0, 0.0799999982, 0)
+AudioIDBox.Size = UDim2.new(0, 200, 0, 21)
+AudioIDBox.Font = Enum.Font.Gotham
+AudioIDBox.PlaceholderText = "Enter Audio ID"
+AudioIDBox.Text = ""
+AudioIDBox.TextColor3 = Color3.fromRGB(194, 194, 194)
+AudioIDBox.TextSize = 13.000
+AudioIDBox.TextWrapped = true
+
+UICorner_5.CornerRadius = UDim.new(0, 4)
+UICorner_5.Parent = AudioIDBox
+
+UIPadding.Parent = MassPlay
+UIPadding.PaddingRight = UDim.new(0, 16)
+
+StealBoomboxes.Name = "StealBoomboxes"
+StealBoomboxes.Parent = MainFrame
+StealBoomboxes.BackgroundColor3 = Color3.fromRGB(255, 184, 3)
+StealBoomboxes.BorderSizePixel = 0
+StealBoomboxes.ClipsDescendants = true
+StealBoomboxes.Position = UDim2.new(0, 0, 0.5, 0)
+StealBoomboxes.Size = UDim2.new(0, 290, 0, 25)
+StealBoomboxes.Font = Enum.Font.Gotham
+StealBoomboxes.Text = "Steal Boomboxes"
+StealBoomboxes.TextColor3 = Color3.fromRGB(33, 33, 33)
+StealBoomboxes.TextSize = 13.000
+
+UICorner_6.CornerRadius = UDim.new(0, 4)
+UICorner_6.Parent = StealBoomboxes
+
+DropBoomboxes.Name = "DropBoomboxes"
+DropBoomboxes.Parent = MainFrame
+DropBoomboxes.BackgroundColor3 = Color3.fromRGB(255, 184, 3)
+DropBoomboxes.BorderSizePixel = 0
+DropBoomboxes.ClipsDescendants = true
+DropBoomboxes.Position = UDim2.new(0, 0, 0.657894731, 0)
+DropBoomboxes.Size = UDim2.new(0, 290, 0, 25)
+DropBoomboxes.Font = Enum.Font.Gotham
+DropBoomboxes.Text = "Drop Boomboxes"
+DropBoomboxes.TextColor3 = Color3.fromRGB(33, 33, 33)
+DropBoomboxes.TextSize = 13.000
+
+UICorner_7.CornerRadius = UDim.new(0, 4)
+UICorner_7.Parent = DropBoomboxes
+
+CountBoomboxes.Name = "CountBoomboxes"
+CountBoomboxes.Parent = MainFrame
+CountBoomboxes.BackgroundColor3 = Color3.fromRGB(255, 184, 3)
+CountBoomboxes.BorderSizePixel = 0
+CountBoomboxes.ClipsDescendants = true
+CountBoomboxes.Position = UDim2.new(0, 0, 0.815789461, 0)
+CountBoomboxes.Size = UDim2.new(0, 290, 0, 25)
+CountBoomboxes.Font = Enum.Font.Gotham
+CountBoomboxes.Text = "Count Boomboxes"
+CountBoomboxes.TextColor3 = Color3.fromRGB(33, 33, 33)
+CountBoomboxes.TextSize = 13.000
+
+UICorner_8.CornerRadius = UDim.new(0, 4)
+UICorner_8.Parent = CountBoomboxes
+
+UIPadding_2.Parent = MainFrame
+UIPadding_2.PaddingLeft = UDim.new(0, 5)
+
+BoomText.Name = "BoomText"
+BoomText.Parent = MainFrame
+BoomText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BoomText.BackgroundTransparency = 1.000
+BoomText.BorderSizePixel = 0
+BoomText.LayoutOrder = -1
+BoomText.Size = UDim2.new(0, 245, 0, 20)
+BoomText.Font = Enum.Font.Gotham
+BoomText.Text = "Boom"
+BoomText.TextColor3 = Color3.fromRGB(255, 184, 3)
+BoomText.TextSize = 14.000
+
+BoxerText.Name = "BoxerText"
+BoxerText.Parent = BoomText
+BoxerText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BoxerText.BackgroundTransparency = 1.000
+BoxerText.BorderSizePixel = 0
+BoxerText.LayoutOrder = -1
+BoxerText.Position = UDim2.new(0.168442339, 0, 0, 0)
+BoxerText.Size = UDim2.new(0, 245, 0, 20)
+BoxerText.Font = Enum.Font.Gotham
+BoxerText.Text = "Boxer"
+BoxerText.TextColor3 = Color3.fromRGB(255, 255, 255)
+BoxerText.TextSize = 14.000
+
+Sample.Name = "Sample"
+Sample.Parent = MainFrame
+Sample.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sample.BackgroundTransparency = 1.000
+Sample.Image = "http://www.roblox.com/asset/?id=4560909609"
+Sample.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Sample.ImageTransparency = 0.600
+local function Ripple(Button)
+local ms = game.Players.LocalPlayer:GetMouse()
+
+local btn = Button
+local sample = Sample
+
+btn.MouseButton1Click:Connect(function()
+	local c = sample:Clone()
+	c.Parent = btn
+	local x, y = (ms.X - c.AbsolutePosition.X), (ms.Y - c.AbsolutePosition.Y)
+	c.Position = UDim2.new(0, x, 0, y)
+	local len, size = 0.35, nil
+	if btn.AbsoluteSize.X >= btn.AbsoluteSize.Y then
+		size = (btn.AbsoluteSize.X * 1.5)
+	else
+		size = (btn.AbsoluteSize.Y * 1.5)
+	end
+	c:TweenSizeAndPosition(UDim2.new(0, size, 0, size), UDim2.new(0.5, (-size / 2), 0.5, (-size / 2)), 'Out', 'Quad', len, true, nil)
+	for i = 1, 10 do
+		c.ImageTransparency = c.ImageTransparency + 0.05
+		wait(len / 12)
+	end
+	c:Destroy()
+	end)
+	end
+
+local UIS = game:GetService("UserInputService")
+function dragify(Frame)
+	dragToggle = nil
+	local dragSpeed = 0.50
+	dragInput = nil
+	dragStart = nil
+	local dragPos = nil
+	function updateInput(input)
+		local Delta = input.Position - dragStart
+		local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+		game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	end
+	Frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+			dragToggle = true
+			dragStart = input.Position
+			startPos = Frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	Frame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	game:GetService("UserInputService").InputChanged:Connect(function(input)
+		if input == dragInput and dragToggle then
+			updateInput(input)
+		end
+	end)
+end
+
+dragify(HolderFrame)
+
+local Player = game.Players.LocalPlayer
+local Character = Player.Character
+
+local Mouse = Player:GetMouse()
+
+Mouse.KeyDown:Connect(function(Key)
+	if Key == "z" then 
+		BoomBoxerGui:Destroy()
+	end
+end)
+
+local Duping = false
+local StopDuping = false
+
+DupeBoomboxes.MouseButton1Down:Connect(function()
+	Ripple(DupeBoomboxes)
+	if Duping == false then
+		StopDuping = false
+		DupeBoomboxes.Text = "Stop Duping"
+		Duping = true
+
+		local DupingAmount = AmountBox.Text
+
+
+
+
+		local Blacklist = {
+			"Foil",
+			"BloxyCola"
+		}
+
+		local Plrs = game:GetService("Players")
+		local Plr = Plrs.LocalPlayer
+		local HB = game:GetService("RunService").Heartbeat
+
+		local function GrabTools()
+			for _,v in pairs(workspace:GetChildren()) do
+				if v:IsA("Tool") and v.Name =="BoomBox" then
+					Plr.Character.Humanoid:EquipTool(v)
+				end    
+			end    
+		end
+
+		local function DropTools()
+			for _,v in pairs(Plr.Backpack:GetChildren()) do
+				if not table.find(Blacklist, v.Name)then
+					v.Parent = Plr.Character
+				end    
+			end
+			wait()
+			for _,v in pairs(Plr.Character:GetChildren()) do
+				if v:IsA("Tool") then
+					v.Parent = workspace
+				end    
+			end
+		end    
+
+		for i = 1,DupingAmount do
+			if StopDuping ~= true then
+				Plr.Character:move(Vector3.new(2048,98765,0))
+				GrabTools()
+				wait(0.5)
+				DropTools()
+				repeat
+					HB:wait()
+				until not Plr.Character:FindFirstChildOfClass("Tool")
+				wait()
+				Plrs:Chat("-re")
+				Plr.CharacterAppearanceLoaded:Wait()
+				repeat HB:wait() until Plr.Character:FindFirstChild("HumanoidRootPart")
+				repeat HB:wait() until Plr.Character:FindFirstChild("Humanoid")
+			else
+				break
+			end
+		end
+
+		Plr.Character:move(Vector3.new(0,10,0))
+		GrabTools()
+		Duping = false
+		DupeBoomboxes.Text = "Dupe"
+	end
+	if Duping == true then
+		StopDuping = true
+		Duping = false
+		DupeBoomboxes.Text = "Dupe"
+		GrabTools()
+	end
+end)
+
+DropBoomboxes.MouseButton1Down:Connect(function()
+	Ripple(DropBoomboxes)
+	for _,v in pairs(Player.Backpack:GetChildren()) do
+		if v.Name == "BoomBox" then
+			v.Parent = Player.Character
+		end
+		wait()
+		for _,v in pairs(Player.Character:GetChildren()) do
+			if v.Name == "BoomBox" then
+				v.Parent = workspace
+			end
+		end	
+	end
+end)
+
+StealBoomboxes.MouseButton1Down:Connect(function()
+	Ripple(StealBoomboxes)
+	for _,v in pairs(workspace:GetChildren()) do
+		if v:IsA("Tool") and v.Name == "BoomBox" then
+			Player.Character.Humanoid:EquipTool(v)
+		end
+	end
+end)
+
+MassPlay.MouseButton1Down:Connect(function()
+	Ripple(MassPlay)
+	for _,v in pairs(Player.Backpack:GetChildren()) do
+		if v.Name == "BoomBox" then
+			v.Parent = Player.Character
+		end
+	end
+	wait(0.4)
+	for _,v in pairs(Player.Character:GetChildren()) do
+		if v.Name == "BoomBox" then
+			v.RemoteEvent:FireServer(AudioIDBox.Text)
+		end
+	end
+end)
+
+CountBoomboxes.MouseButton1Down:Connect(function()
+    local amt = 0
+    game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+    for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+        if v.Name == "BoomBox" then
+            amt = amt + 1
+        end
+    end   
+    --game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack({[1] = tostring(amt).." Boomboxes",[2] = "All"}))
+    game.StarterGui:SetCore("SendNotification",{Title = "Boombox Count", Text = "You have "..tostring(amt).." Boomboxes"})
+end)    
