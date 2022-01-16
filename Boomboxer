@@ -299,6 +299,7 @@ end)
 
 local Duping = false
 local StopDuping = false
+local DupeDisplayNmb
 
 DupeBoomboxes.MouseButton1Down:Connect(function()
 	Ripple(DupeBoomboxes)
@@ -306,9 +307,13 @@ DupeBoomboxes.MouseButton1Down:Connect(function()
 		StopDuping = false
 		DupeBoomboxes.Text = "Stop Duping"
 		Duping = true
-
+		
+        DupeDisplayNmb = AmountBox.Text
+        
+        
 		local DupingAmount = AmountBox.Text
-
+        
+       
 
 
 
@@ -345,6 +350,7 @@ DupeBoomboxes.MouseButton1Down:Connect(function()
 
 		for i = 1,DupingAmount do
 			if StopDuping ~= true then
+			   
 				Plr.Character:move(Vector3.new(2048,98765,0))
 				GrabTools()
 				wait(0.5)
@@ -357,6 +363,8 @@ DupeBoomboxes.MouseButton1Down:Connect(function()
 				Plr.CharacterAppearanceLoaded:Wait()
 				repeat HB:wait() until Plr.Character:FindFirstChild("HumanoidRootPart")
 				repeat HB:wait() until Plr.Character:FindFirstChild("Humanoid")
+				 DupeDisplayNmb = DupeDisplayNmb - 1
+			     AmountBox.Text = DupeDisplayNmb
 			else
 				break
 			end
